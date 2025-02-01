@@ -1,12 +1,18 @@
-import "../App.css"; // Using App.css for styles
+import "../App.css";
 
 const Hero = () => {
+  const handleExploreClick = () => {
+    document.getElementById("countries").scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <div className="hero-content">
         <h1>Start Your Journey with NAYA PAHILA</h1>
         <p>Apply to top universities in the USA, Europe, Australia, and Canada.</p>
-        <button className="hero-btn">Explore More</button>
+        <button className="hero-btn" onClick={handleExploreClick}>
+          Explore More
+        </button>
       </div>
     </section>
   );

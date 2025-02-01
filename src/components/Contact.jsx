@@ -1,8 +1,30 @@
-import "../App.css"; // Using App.css for styles
+import { useState } from "react";
+import "../App.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Please fill out all fields.");
+      return;
+    }
+    alert("Thank you for contacting us! We will get back to you soon.");
+    setFormData({ name: "", email: "", message: "" });
+  };
+
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <h2>Contact Us</h2>
       <p>Visit us at our office or get in touch via phone or email.</p>
 
@@ -11,6 +33,35 @@ const Contact = () => {
         <p><strong>📞 Phone:</strong> +977-1234567890</p>
         <p><strong>📧 Email:</strong> nayapahila2081@gmail.com</p>
       </div>
+
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit" className="contact-btn">
+          Send Message
+        </button>
+      </form>
 
       <div className="map-container">
         <iframe
