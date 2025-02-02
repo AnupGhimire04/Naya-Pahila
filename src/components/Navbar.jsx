@@ -15,7 +15,10 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        <h1 className="logo">NAYA PAHILA</h1>
+        <div className="logo">
+          <img src="/logo.png" alt="UCL Logo" className="logo-img" />
+          <h1>UCL</h1>
+        </div>
         <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? "✕" : "☰"}
         </button>

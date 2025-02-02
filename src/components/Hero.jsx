@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="hero" id="home">
       <div className="hero-content">
-        <h1>Start Your Journey with NAYA PAHILA</h1>
+        <h1>Start Your Journey with UCL</h1>
         <p>Apply to top universities in the USA, Europe, Australia, and Canada.</p>
         <button className="hero-btn" onClick={handleExploreClick}>
           Explore More

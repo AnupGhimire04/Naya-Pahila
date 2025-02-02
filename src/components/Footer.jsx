@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <h2>NAYA PAHILA</h2>
+        <h2>UCL</h2>
         <p>Your trusted consultancy for a brighter future abroad.</p>
 
         <nav className="footer-nav">
@@ -50,7 +50,7 @@ const Footer = () => {
           <button type="submit">Subscribe</button>
         </form>
 
-        <p className="copyright">© 2025 NAYA PAHILA. All rights reserved.</p>
+        <p className="copyright">© 2025 UCL. All rights reserved.</p>
       </div>
     </footer>
   );

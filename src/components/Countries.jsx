@@ -16,7 +16,7 @@ const Countries = () => {
         {countries.map((country, index) => (
           <div key={index} className="country-card">
             <img src={country.flag} alt={`${country.name} Flag`} className="flag" />
-            <p>{country.name}</p>
+            <p className="country-name">{country.name}</p> {/* Add country name here */}
           </div>
         ))}
       </div>

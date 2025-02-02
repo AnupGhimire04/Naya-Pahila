@@ -459,3 +459,21 @@ h1, h2, h3 {
 .close-btn:hover {
   background-color: #e68900;
 }
+
+.country-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333; /* Dark color for visibility */
+  margin-top: 10px; /* Spacing between flag and name */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 80px;
+  height: 60px;
+}
